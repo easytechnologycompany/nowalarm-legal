@@ -1,0 +1,175 @@
+<title>NowAlarm Privacy</title>
+<meta name="description" content="How NowAlarm handles location, alarms, and subscriptions — in plain language.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #f7f3ea;
+    --surface: #ffffff;
+    --surface-border: #e7ded0;
+    --text: #211d18;
+    --text-muted: #6b6357;
+    --accent-sunrise: #c76a1f;
+    --accent-sunset: #b6432f;
+    --rule: #e7ded0;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14120f;
+      --surface: #1d1a15;
+      --surface-border: #332d24;
+      --text: #f3ecdf;
+      --text-muted: #b3a893;
+      --accent-sunrise: #e79a4a;
+      --accent-sunset: #e07a5f;
+      --rule: #332d24;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14120f;
+    --surface: #1d1a15;
+    --surface-border: #332d24;
+    --text: #f3ecdf;
+    --text-muted: #b3a893;
+    --accent-sunrise: #e79a4a;
+    --accent-sunset: #e07a5f;
+    --rule: #332d24;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  header.page {
+    margin-bottom: 48px;
+  }
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .mark svg { width: 26px; height: 26px; flex: none; }
+  .mark span {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    line-height: 1.1;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .kicker {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 40px 0 12px;
+    color: var(--accent-sunrise);
+  }
+  p { margin: 0 0 14px; color: var(--text); }
+  p.lead {
+    font-size: 1.08rem;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent-sunset);
+    padding-left: 16px;
+    margin: 24px 0 40px;
+  }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 24px 0;
+  }
+  .contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    user-select: all;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  a { color: var(--accent-sunset); }
+</style>
+
+<div class="wrap">
+  <header class="page">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="14" r="5" fill="var(--accent-sunrise)"/>
+        <path d="M2 19h20" stroke="var(--accent-sunset)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M12 3v2.4M5.6 6.6l1.7 1.7M18.4 6.6l-1.7 1.7" stroke="var(--accent-sunrise)" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>NowAlarm</span>
+    </div>
+    <div class="kicker">Privacy Policy · Effective September 25, 2026</div>
+    <h1>Your data stays on your phone</h1>
+  </header>
+
+  <p class="lead">NowAlarm is built to work entirely on your device. There is no NowAlarm server — nothing you do in the app is collected, sold, or shared, because there is nowhere for it to go.</p>
+
+  <h2>Location</h2>
+  <p>NowAlarm uses your location for one purpose: calculating today's sunrise and sunset time for your alarms. That calculation happens on your device. Your location is cached locally so alarms resolve instantly, and it is never transmitted anywhere, logged, or shared.</p>
+  <p>You can deny location access and enter a location manually instead, or revoke access at any time in <strong>Settings → Privacy & Security → Location Services</strong>.</p>
+
+  <h2>Alarms &amp; notifications</h2>
+  <p>Alarms are scheduled directly on your device through Apple's AlarmKit and local notification frameworks. NowAlarm has no backend to schedule them from, and no record of your alarms ever leaves your phone.</p>
+
+  <h2>Subscriptions &amp; payments</h2>
+  <p>Subscription purchases are handled entirely by Apple through StoreKit. NowAlarm never sees your card number, billing address, or Apple ID — that transaction is covered by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's own privacy policy</a>.</p>
+
+  <h2>No analytics, no tracking, no ads</h2>
+  <div class="card">
+    <ul>
+      <li>No third-party analytics or crash-reporting SDKs</li>
+      <li>No advertising networks or ad identifiers</li>
+      <li>No cross-app or cross-site tracking of any kind</li>
+      <li>No account, sign-up, email, contacts, photo, or microphone access</li>
+    </ul>
+  </div>
+
+  <h2>Children</h2>
+  <p>NowAlarm is not directed at children under 13, and we do not knowingly collect information from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the update date at the top of this page will change with it. Continued use of NowAlarm after an update means you accept the revised policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy? Reach out directly:</p>
+  <span class="contact">✉️ osama.jassim.go@gmail.com</span>
+
+  <footer>NowAlarm — wake with the sun.</footer>
+</div>

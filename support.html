@@ -1,0 +1,218 @@
+<title>NowAlarm Support</title>
+<meta name="description" content="Answers to common NowAlarm questions, and how to reach us.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #f7f3ea;
+    --surface: #ffffff;
+    --surface-border: #e7ded0;
+    --text: #211d18;
+    --text-muted: #6b6357;
+    --accent-sunrise: #c76a1f;
+    --accent-sunset: #b6432f;
+    --rule: #e7ded0;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14120f;
+      --surface: #1d1a15;
+      --surface-border: #332d24;
+      --text: #f3ecdf;
+      --text-muted: #b3a893;
+      --accent-sunrise: #e79a4a;
+      --accent-sunset: #e07a5f;
+      --rule: #332d24;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14120f;
+    --surface: #1d1a15;
+    --surface-border: #332d24;
+    --text: #f3ecdf;
+    --text-muted: #b3a893;
+    --accent-sunrise: #e79a4a;
+    --accent-sunset: #e07a5f;
+    --rule: #332d24;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .mark svg { width: 26px; height: 26px; flex: none; }
+  .mark span {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    line-height: 1.1;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .kicker { color: var(--text-muted); font-size: 0.95rem; }
+  p.lead {
+    font-size: 1.08rem;
+    color: var(--text-muted);
+    margin: 24px 0 40px;
+  }
+  .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0 0 40px;
+  }
+  details {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    padding: 4px 22px;
+  }
+  details + details { margin-top: 0; }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 16px 0;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.08rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    color: var(--accent-sunset);
+    font-size: 1.4rem;
+    font-weight: 400;
+    flex: none;
+    transition: transform 0.2s ease;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  .a { padding: 0 0 18px; color: var(--text); }
+  .a p { margin: 0 0 10px; }
+  .a p:last-child { margin-bottom: 0; }
+
+  h2.section {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 16px;
+    color: var(--accent-sunrise);
+  }
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    padding: 24px 22px;
+  }
+  .contact-card p { margin: 0 0 14px; color: var(--text-muted); }
+  .contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--surface-border);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    user-select: all;
+    background: var(--bg);
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  a { color: var(--accent-sunset); }
+</style>
+
+<div class="wrap">
+  <div class="mark">
+    <svg viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="14" r="5" fill="var(--accent-sunrise)"/>
+      <path d="M2 19h20" stroke="var(--accent-sunset)" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M12 3v2.4M5.6 6.6l1.7 1.7M18.4 6.6l-1.7 1.7" stroke="var(--accent-sunrise)" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <span>NowAlarm</span>
+  </div>
+  <div class="kicker">Support</div>
+  <h1>Questions, answered</h1>
+  <p class="lead">NowAlarm wakes you with the sun instead of a clock. If something's not working the way you expect, start here — or skip straight to the bottom to reach us directly.</p>
+
+  <h2 class="section">Frequently asked</h2>
+  <div class="faq">
+    <details open>
+      <summary>Why is there no snooze button?</summary>
+      <div class="a">
+        <p>That's on purpose. Sunrise and sunset alarms are meant to be woken to gradually, not fought with and deferred nine minutes at a time. If you dismiss it, it's dismissed — the next occurrence resolves against the next sunrise or sunset automatically.</p>
+      </div>
+    </details>
+    <details>
+      <summary>My alarm didn't ring — what happened?</summary>
+      <div class="a">
+        <p>Two permissions matter most:</p>
+        <p><strong>Alarm access:</strong> Settings → NowAlarm → make sure "Alarms" is allowed. Without it, nothing can be scheduled.</p>
+        <p><strong>Location access:</strong> without a location, NowAlarm can't calculate that day's sunrise/sunset time. Grant location access, or set a manual location from inside the app.</p>
+      </div>
+    </details>
+    <details>
+      <summary>How does the free trial work?</summary>
+      <div class="a">
+        <p>Every new install gets 14 days of full access, no payment required up front. After the trial ends, an active subscription is needed to keep sunrise and sunset alarms running.</p>
+      </div>
+    </details>
+    <details>
+      <summary>I got a new phone — how do I restore my subscription?</summary>
+      <div class="a">
+        <p>Open the paywall screen and tap <strong>Restore Purchases</strong>. Apple verifies your existing subscription against the Apple ID you're signed in with and restores it instantly — no need to contact us.</p>
+      </div>
+    </details>
+    <details>
+      <summary>How do I cancel or change my subscription?</summary>
+      <div class="a">
+        <p>Subscriptions are managed entirely by Apple: open the <strong>Settings</strong> app → your name → <strong>Subscriptions</strong> → NowAlarm. We don't have a separate cancellation flow, and we never see your payment details.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Does NowAlarm need an internet connection?</summary>
+      <div class="a">
+        <p>No. Sunrise/sunset math runs entirely on your device once it has a location fix. NowAlarm works fully offline, including in airplane mode.</p>
+      </div>
+    </details>
+  </div>
+
+  <h2 class="section">Still stuck?</h2>
+  <div class="contact-card">
+    <p>Send a note with your device model and iOS version if it's a bug — it helps us track it down faster.</p>
+    <span class="contact">✉️ osama.jassim.go@gmail.com</span>
+  </div>
+
+  <footer>NowAlarm — wake with the sun. See also our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</footer>
+</div>
